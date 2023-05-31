@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*============================================ NAV ======================================*/
+
+/* ================================= BANNER =================================*/
+
+.banner-purchase {
+    width: 100%;
+    height: 50vh;
+
+    background-image: url(./assets/Chocolate\ Wallpapers\ HD\ Backgrounds\ Images\ Pics\ Photos.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-purchase p {
+    
+    font-size: 3em;
+    font-weight: 500;
+    letter-spacing: -0.05em;
+    color: #fff;
+}
+
+/* ================================= FORM ================================== */
+
+section {
+
+    background-image: linear-gradient(135.08deg, #d97f584f 0%, rgba(255, 172, 136, 0) 100%);
+    height: 80em;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: space-around;
+    gap: 0.8em;
+
+    font-family: "Ubuntu";
+}
+
+.container {
+    width: 90vw;
+
+    margin: 0 auto;
+    /* background-color: red; */
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    /* grid-template-rows: repeat(2,1fr); */
+
+    gap: 0.5rem;
+}
+
+.form {
+    grid-row: 3 / -1;
+    grid-column:  3 / -1;
+
+    width: 15em;
+    height: 15em;
+
+    margin: 0 auto;
+    
+    background-color: rgba(255, 255, 255, 0.475); 
+    border-radius: 1.5em;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 1em;
+
+    box-shadow: 0 0.3rem 0.4em rgba(0, 0, 0, 0.11);
+    
+}
+
+.cart {
+    grid-row: 1;
+    grid-column: 1;
+
+    height: 15em;
+    width: 15em;
+    padding: 1rem;
+    overflow: scroll;
+
+    margin: 0 auto;
+    border-radius: 20px;
+    
+    background-color: rgba(255, 255, 255, 0.475);
+    box-shadow: 0 0.3rem 0.4em rgba(0, 0, 0, 0.11); 
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.field-container {
+    height: 15em;
+    width: 15em;
+    padding: 2em;
+    
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.475); 
+    border-radius: 1.5em;
+    box-shadow: 0 0.3rem 0.4em rgba(0, 0, 0, 0.11);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.field-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+#addBtn {
+  align-self: center;
+}
+
+#addBtn,
+#submitBtn {
+    font-family: "Ubuntu";
+    color: #753422;
+    background-color: #FFEBC9;
+    box-shadow: 0 0.1rem 0.1em rgba(0, 0, 0, 0.25);
+    text-decoration: none;
+    border: none;
+    font-size: 1em;
+
+    padding: 5px;
+    
+    border-radius: 0.2em;
+
+    cursor: pointer;
+}
+
+#submitBtn {
+    width: 8em;
+    height: 2em;
+}
+
+#addBtn:hover,
+#submitBtn:hover {
+    color: #FFEBC9;
+    background-color: #753422;
+}
+
+label {
+    font-size: 1em;
+    color: #753422;
+}
+
+input {
+    font-family: "Ubuntu";
+    text-align: center;
+    padding: 2px;
+}
+
+input:nth-child(4) {
+    height: 1.5em;
+}
+
+/* ================================== MEDIA QUERY ================================ */
+
+@media (max-width: 840px) {
+
+
+    .banner-purchase {
+        /* margin-top: 50px; */
+        width: 100%;
+        height: 35vh;
+    }
+    
+    .banner-purchase p {
+        font-size: 2rem;
+    }
+
+    .container {
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3,1fr);
+
+        gap: 3rem;
+
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .form {
+        grid-row: 3 / 3;
+        grid-column: 1;
+    
+    }
+    .cart {
+        grid-row: 2 / 3;
+        grid-column: 1;
+        border-radius: 20px;
+    }
+
+    .field-container {
+        grid-row: 1 / 2;
+        grid-column: 1;
+    }
+}
+

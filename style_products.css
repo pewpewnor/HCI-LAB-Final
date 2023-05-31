@@ -1,0 +1,224 @@
+/* begin first */
+
+.first {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url("assets/products-background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 90vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 74px;
+}
+
+/* start card */
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    align-items: flex-start;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-bottom: 10px;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 4px 5px 5px 0px rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card-img > img {
+    display: block;
+    max-width: 100%;
+    transition: 200ms transform ease-in-out;
+}
+
+.card-img > img:hover {
+    transform: scale(1.25);
+}
+
+.card-btn {
+    border: none;
+    font-family: "Ubuntu";
+    font-weight: 500;
+    font-size: 16px;
+    padding: 0.75em 0.75em;
+    border-radius: 0 0 10px 10px;
+    cursor: pointer;
+    width: 100%;
+    background: #FAF9F6;
+    color: #B05B3B;
+}
+
+.card-btn:hover, .card-btn:focus {
+    background-color: #B05B3B;
+    color: white;
+}
+
+.p1 {
+    background-color: rgba(238, 130, 238, 0.2);
+}
+
+.p1 > .card-img:hover {
+    background-color: rgba(238, 130, 238, 0.5);
+}
+
+.p2 {
+    background-color: rgba(255, 215, 0, 0.2);
+}
+
+.p2 > .card-img:hover {
+    background-color: rgba(255, 215, 0, 0.5);
+}
+
+.p3 {
+    background-color: rgba(255, 140, 105, 0.4);
+}
+
+.p3 > .card-img:hover {
+    background-color: rgba(255, 140, 105, 0.6);
+}
+
+.p4 {
+    background-color: rgba(215, 0, 64, 0.2);
+}
+
+.p4 > .card-img:hover {
+    background-color: rgba(215, 0, 64, 0.4);
+}
+
+@media (max-width: 1100px) {
+    .row { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 1000px) {
+    .row { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 535px) {
+    .row { grid-template-columns: repeat(1, 1fr); }
+}
+
+@media (max-width: 340px) {
+    .first {
+        padding-left: 5%;
+        padding-right: 7%;
+    }
+}
+
+/* end card */
+
+/* end first */
+
+/* begin half screen settings */
+
+.half-screen {
+    min-height: 50vh;
+    position: relative;
+    overflow: hidden;
+    padding: 74px;
+}
+
+.half-screen > img {
+    position: absolute;
+    top: 0;
+}
+
+.desc > h4 {
+    font-family: "Ubuntu";
+    font-size: 36px;
+    font-weight: 900;
+    color: #602919;
+}
+
+.desc > p {
+    font-family: "Ubuntu";
+    font-size: 16px;
+    font-weight: 400;
+    color: #B05B3B;
+    margin-top: 30px;
+}
+
+.right > .desc > h4, .right > .desc > p {
+    text-align: right;
+}
+
+.right > img {
+    left: -50px;
+    transform: rotate(13.54deg);
+}
+
+.right > .desc {
+    padding-left: 30%;
+}
+
+.left > .desc > h4, .left > .desc > p {
+    text-align: left;
+}
+
+.left > img {
+    right: -50px;
+    transform: rotate(-13.54deg);
+}
+
+.left > .desc {
+    padding-right: 30%;
+}
+
+/* end half screen settings */
+
+/* begin half screen mods */
+
+#second {
+    background-color: rgba(238, 130, 238, 0.5);
+}
+
+#third {
+    background-color: rgba(255, 215, 0, 0.2);
+}
+
+#fourth {
+    background-color: rgba(255, 140, 105, 0.5);
+}
+
+#fifth {
+    background-color: rgba(215, 0, 64, 0.5);
+}
+
+/* end half screen mods */
+
+@media (max-width: 900px) {
+    .half-screen > img {
+        display: none;
+    }
+}
+
+@media (max-width: 420px) {
+    .left > .desc {
+        padding-right: 0;
+    }
+
+    .right > .desc {
+        padding-left: 0;
+    }
+
+    .left > .desc > h4, .left > .desc > p {
+        text-align: center;
+    }
+
+    .right > .desc > h4, .right > .desc > p {
+        text-align: center;
+    }
+}
+
+@media (max-width: 350px) {
+    .half-screen {
+        padding: 25px 25px;
+    }
+}

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="script_purchase.js"></script>
+		<title>Purchase - CHocs</title>
+
+            <!-- FONT: UBUNTU -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="skeleton.css" />
+        <link rel="stylesheet" href="./purchase.css">
+
+    <!-- LOGO -->
+    <link rel="icon" href="./assets/Dribbble_logo.png">
+    
+	</head>
+	<body>
+        <nav>
+            <div class="menu">
+                <div class="nav-left">
+                    <p class="logo">chocs</p>
+                </div>
+
+                <div class="nav-right">
+                    <a href="./index.html" class="btn-nav">Home</a>
+                    <a href="./products.html" class="btn-nav">Products</a>
+                    <a href="./purchase.html" class="btn-nav">Purchase</a>
+                    <a href="./about.html" class="btn-nav">About us</a>
+                    <a href="./location.html" class="btn-nav">Location</a>
+                </div>
+
+                <div class="nav-right-dropdown btn-nav">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="menu-icon"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                    >
+                        <path
+                            fill-rule="evenodd"
+                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                            clip-rule="evenodd"
+                        />
+                    </svg>
+                </div>
+
+                <div class="dropdown">
+                    <div class="close">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="close"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                clip-rule="evenodd"
+                            />
+                        </svg>
+                    </div>
+
+                    <a href="./index.html" class="btn-nav">Home</a>
+                    <a href="./products.html" class="btn-nav">Products</a>
+                    <a href="./purchase.html" class="btn-nav">Purchase</a>
+                    <a href="./about.html" class="btn-nav">About us</a>
+                    <a href="./location.html" class="btn-nav">Location</a>
+                </div>
+            </div>
+        </nav>
+
+        <section>
+
+            <div class="banner-purchase">
+                <p>
+                    Order Our Product!
+                </p>
+            </div>
+
+            <div class="container">
+                
+                <div class="form">
+                    <div class="field">
+                        <label for="input_name">Name :</label>
+                        <input type="text" name="input_name" id="iname" placeholder="Name" />
+                    </div>
+                    <div class="field">
+                        <label for="input_phone">Phone :</label>
+                        <input
+                        type="text"
+                        name="input_phone"
+                        id="iphone"
+                        placeholder="Phone Number"
+                        />
+                    </div>
+                    <div class="field">
+                        <label for="input_addr">Address :</label>
+                        <input type="text" name="input_addr" id="iaddr" placeholder="Address" />
+                    </div>
+                    
+                    <input type="submit" value="Submit" id="submitBtn" />
+                </div>
+                
+                <div class="field-container">
+                    <div class="field-1 field">
+                        <label for="input_product">Product :</label>
+                        <input
+                        type="text"
+                        name="input_product"
+                        list="product-list"
+                        id="product"
+                        />
+                        <datalist id="product-list">
+                            <option value="75% Cocoa Sulawesi"></option>
+                            <option value="100% Cocoa Dark Chocolate"></option>
+                            <option value="70% Cocoa Dark Chocolate"></option>
+                            <option value="53% Cocoa Cinnamon"></option>
+                        </datalist>
+                        
+                        <label for="input_quantity">Quantity :</label>
+                        <input type="text" name="input_quantity" id="quantity" />
+                        
+                        <button id="addBtn">Add To Cart</button>
+                    </div>
+                </div>
+
+                <div class="cart">
+                    <div id="cart-list"></div>
+                </div>
+                
+            </div>
+        </section>
+
+  <footer>
+			<div class="footer-bar">
+				<div class="footer-row">
+					<div class="footer-col">
+						<p class="footer-logo-title footer-logo-text">CHOCS</p>
+						<p class="footer-logo-sub footer-logo-text">
+							Simply the best chocolates you will ever taste.
+						</p>
+						<div class="light-checkbox">
+							<input type="checkbox" name="light-input" id="" />
+							<label class="footer-logo-text" for="light-input"
+								>Enable Dark View</label
+							>
+						</div>
+					</div>
+					<div class="footer-col">
+						<p class="footer-col-title">PRODUCTS</p>
+						<div class="footer-hr"></div>
+						<ul>
+							<li><a href="./products.html#third">100% Cacao</a></li>
+							<li><a href="./products.html#second">75% Cacao</a></li>
+							<li><a href="./products.html#fourth">70% Cacao</a></li>
+							<li><a href="./products.html#fifth">53% Cacao</a></li>
+						</ul>
+					</div>
+					<div class="footer-col">
+						<p class="footer-col-title">CONTACT</p>
+						<div class="footer-hr"></div>
+						<ul>
+							<li><a href="tel:082243123701">+6282243123701</a></li>
+						</ul>
+					</div>
+					<div class="footer-col">
+						<p class="footer-col-title">LOCATION</p>
+						<div class="footer-hr"></div>
+						<ul>
+							<li><a href="./location.html#loc1">Chocs World</a></li>
+							<li><a href="./location.html#loc2">Chocs Stadium</a></li>
+						</ul>
+					</div>
+					<div class="footer-col">
+						<p class="footer-col-title">SOCIALS</p>
+						<div class="footer-hr"></div>
+						<div class="socials">
+							<a href="https://www.instagram.com/the.chocs/" target="_blank">
+								<img
+									src="assets/instagram-square-brands.svg"
+									alt=""
+									srcset=""
+								/>
+							</a>
+							<a href="https://twitter.com/hersheycompany" target="_blank">
+								<img src="assets/twitter-square-brands.svg" alt="" srcset="" />
+							</a>
+							<a href="https://www.facebook.com/hersheys/" target="_blank">
+								<img src="assets/facebook-square-brands.svg" alt="" srcset="" />
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+        <script src="script_nav.js"></script>
+	</body>
+
+</html>

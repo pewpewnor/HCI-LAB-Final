@@ -1,0 +1,306 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  scroll-behavior:smooth;
+}
+
+ul {
+    list-style: none;
+}
+
+li, a {
+    text-decoration: none;
+}
+
+/* start nav */
+
+nav {
+    background: linear-gradient(90deg, #753422 0%, rgba(185, 114, 45, 0.739583) 100%);
+    color: #FFEBC9;
+   
+    height: 6rem;
+
+    font-size: 1em;
+    font-family: "Ubuntu";
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.2em 1em;
+    width: 90vw;
+}
+
+.logo {
+    font-size: 2em;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.nav-right { 
+    display: flex;
+    align-items: center;
+    gap: 5vw;
+
+}
+
+.nav-right-dropdown {
+    display: none;
+}
+
+.btn-nav {
+    text-decoration: none;
+    color: #FFEBC9;
+    cursor: pointer;
+}
+
+.btn-nav:hover {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
+
+@media (max-width: 768px) {
+
+    .nav-right {
+        display: none;
+    }
+
+    .nav-right-dropdown {
+        display: inline-block;
+
+        width: 2em;
+    }    
+}
+
+@media (max-width: 602px) {
+
+    .logo {
+        font-size: 1.5em;
+    }
+    
+    .nav-right-dropdown {
+        width: 1.5em;
+    }
+
+    nav {
+        height: 4em;
+    }
+
+}
+
+/* nav dropdown response */
+
+.dropdown a {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.dropdown a:last-child {
+    margin: 0;
+}
+
+.dropdown a:hover,
+.close:hover {
+    border: none;
+    color: #fff;
+}
+
+nav{
+    position: relative;
+}
+
+.dropdown {
+    position: absolute;
+    right: 0%;
+    top: 0%;
+
+   display: inline-block;
+   width: 40vw;
+   
+   padding: 20px;
+
+   z-index: 1;
+
+   cursor: pointer;
+   background: linear-gradient(90deg, #753422 100%, rgba(185, 114, 45, 0.739583) 100%);
+}
+
+.close {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+
+    width: 1.2em;
+}
+
+.dropdown {
+    display: none;
+}
+
+/* end nav */
+
+  /* begin footer */
+  
+  footer {
+      background-color: #97E2DE;
+      padding: 74px;
+      padding-left: 10%;
+  }
+  
+  .footer-bar {
+      margin: auto;
+  }
+  
+  .footer-row {
+      display: flex;
+      flex-wrap: wrap;
+  }
+  
+  .footer-col {
+      width: 20%;
+      padding: 0 15px;
+  }
+  
+  .footer-col-title {
+      font-family: "Ubuntu";
+      font-size: 20px;
+      font-weight: 700;
+      color: black;
+  }
+  
+  .footer-hr {
+      margin: 20px 0;
+      background-color: #2DB95D;
+      width: 30%;
+      min-width: 100px;
+      height: 2px;
+  }
+  
+  .footer-col > ul > li {
+      margin-top: 20px;
+  }
+  
+  .footer-col > ul > li > a {
+      display: block;
+      font-family: "Ubuntu";
+      font-size: 16px;
+      font-weight: 500;
+      color: #602919;
+  }
+  
+  .footer-col > ul > li > a:hover {
+      color: #B05B3B;
+      padding-left: 10px;
+  }
+  
+  .footer-logo-text {
+      font-family: "Ubuntu";
+      font-size: 16px;
+      font-weight: 400;
+      color: #602919;
+  }
+  
+  .footer-logo-title {
+      font-size: 36px;
+      font-weight: 900;
+      color: #B05B3B;
+  }
+  
+  .footer-logo-sub {
+      margin-top: 20px;
+  }
+  
+  .footer-row > .footer-col:first-child {
+      padding-left: 0;
+  }
+  
+  .light-checkbox {
+      margin-top: 20px;
+  }
+  
+  .socials > a {
+      display: inline-block;
+      height: 30px;
+      width: 30px;
+  }
+
+  .socials > a > img {
+    border-radius: 0;
+  }
+  
+  @media (max-width: 900px) {
+      footer {
+          padding-left: 70px;
+      }
+  
+      .footer-col {
+          width: 33%;
+          margin-bottom: 50px;
+      }
+  
+      .footer-col {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+      }
+  
+      .footer-row > .footer-col:first-child {
+          padding: 0;
+      }
+  
+      .footer-col > * {
+          text-align: center;
+      }
+  }
+  
+  @media (max-width: 770px) {
+      .footer-col {
+          width: 50%;
+      }
+  }
+  
+  @media (max-width: 535px) {
+      .footer-col {
+          width: 100%;
+      }
+  
+      .footer-col-title {
+          font-size: 30px;
+      }
+  
+      .footer-col > ul > li > a {
+          font-size: 20px;
+      }
+  }
+  
+  @media (max-width: 175px) {    
+      .footer-col > * {
+          writing-mode: vertical-rl;
+      }
+  
+      .socials > a > img {
+          transform: rotate(90deg);
+      }
+  }
+  
+  /* end footer */
+
+.dark-view {
+    filter: brightness(0.8);
+}

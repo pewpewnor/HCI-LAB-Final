@@ -1,0 +1,160 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*============================================ NAV ======================================*/
+
+/* ============================================= section ================================ */
+
+section {
+
+    background-size: cover;
+    background-image: linear-gradient(135.08deg, #d97f584f 0%, rgba(255, 172, 136, 0) 100%);
+
+}
+
+.container-about {
+
+    /* background-color: red; */
+    width: 80em;
+    /* height: 100em; */
+
+    margin: 0 auto;
+    padding-top: 5em;
+    padding-bottom: 5em;
+
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,1fr);
+
+    row-gap: 10em;
+}
+
+.container-about > img {
+    border-radius: 10px;
+}
+
+.image-grid {
+
+    margin: auto auto;
+    width: 100%;
+
+}
+
+.image-grid-swap {
+
+    grid-column: 2;
+    grid-row: 2;
+
+}
+
+.desc-1,
+.desc-2,
+.desc-3 {
+    margin: auto auto;
+    background-color: white;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4em;
+
+    align-content: center;
+    justify-content: left;
+    padding: 3em;
+
+    background-color: #FFEBC9;
+}
+
+.desc-1 p:first-child,
+.desc-2 p:first-child,
+.desc-3 p:first-child {
+    font-weight: 500;
+    font-family: "Ubuntu";
+    color: #753422;
+    font-size: 1.5em;
+
+    text-align: left;
+    letter-spacing: -0.05em;
+}
+
+.desc-2 p:first-child {
+    text-align: right;
+}
+
+
+.desc-2 {
+    text-align: right;
+}
+
+
+
+.desc-1 p:last-child,
+.desc-2 p:last-child,
+.desc-3 p:last-child {
+
+    font-family: "Ubuntu";
+    font-size: 1em;
+    line-height: 2em;
+    letter-spacing: 0.05em;
+    color: #B05B3B;
+    
+}
+
+@media(max-width: 1300px) {
+
+  .container-about {
+    display: flex;
+    flex-direction: column;
+
+   width: 100%;
+    
+  }
+
+  .image-grid {
+     width: 70%; 
+  }
+  
+  .desc-1,
+  .desc-2,
+  .desc-3 {
+    width:100%;
+  }
+  
+}
+
+@media(max-width: 610px) {
+
+.desc-1 p:first-child,
+.desc-2 p:first-child,
+.desc-3 p:first-child {
+    font-size: 1em;
+}
+
+.desc-1 p:last-child,
+.desc-2 p:last-child,
+.desc-3 p:last-child {
+    font-size: 0.6em;
+    
+}
+  
+}
+
+@media(max-width: 548px) {
+
+.desc-1 p:first-child,
+.desc-2 p:first-child,
+.desc-3 p:first-child {
+    font-size: 0.7em;
+}
+
+.desc-1 p:last-child,
+.desc-2 p:last-child,
+.desc-3 p:last-child {
+    font-size: 0.3em;
+    
+}
+  
+}

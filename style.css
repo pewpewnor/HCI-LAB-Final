@@ -1,0 +1,602 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* MAIN TEXT COLOR #FFEBC9 */
+
+/*=========================================== HEADER AND SECTION ================================*/
+
+section {
+
+    height: 130vh;
+    background: url(assets/vecteezy_dark-brown-chocolate-big-bar-and-some-piece-of-chocolate-with-cream-background_1849398/vecteezy_\ valentine-chocolate-background_ap1220.jpg);
+    background-size: cover;
+
+    position: relative;
+}
+
+.container-header {
+    position: absolute;
+    top: 10%;
+    left: 0%;
+
+    width: 100%;
+    height: 18rem;
+    background-color: #fafafaa0;
+    border: 2px solid #C5C5C5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5em;
+
+}
+
+.choco-header {
+    width: 25em;
+    user-select: none;
+    align-items: center;
+}
+
+.header-text {
+    font-family: "Impact";
+    font-weight: 400;
+    font-size: 5em;
+    user-select: none;
+}
+
+.header-text p:first-child {
+    color: #8A8E90;
+}
+
+.header-text p:last-child {
+    color: #B05B3B;
+}
+
+.container-carousel {
+    background-color: #FFEBC9;
+
+    position: absolute;
+    top: 55%;
+    
+
+    width: 80%;
+    height: 18rem;
+
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+}
+
+.chevron {
+    width: 5vw;
+    background-color: #fff;
+    border-radius: 50%;
+
+    fill: #753422;
+    border: 0.5vw solid #753422;
+}
+
+.chevron:hover {
+    background-color: #753422;
+    fill: #FFEBC9;
+    border: 0.5vw solid #FFEBC9;
+}
+
+.btn-carousel-left {
+    position: absolute;
+    left: 0%;
+    bottom: 50%;
+    transform: translate(-50%, 50%);
+
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.btn-carousel-right {
+    position: absolute;
+    right: 0%;
+    top: 50%;
+    transform: translate(50%, -50%);
+
+    display:flex;
+    align-items: center;  
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* ============================================================= carousel =================================================*/
+
+.carousel-content {
+    /* background-color: red; */
+    width: 85%;
+    height: 85%;
+
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.carousel-content .image {
+    width: 25em;
+}
+
+.image-carousel-vertical {
+  height: 20em;
+  transform: rotate(27deg);
+}
+
+.carousel-content .text {
+    width: fit-content;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.carousel-content .text .desc,
+.carousel-content .text .title {
+    color: #B05B3B;
+    font-family: Impact;
+    font-weight: 400;
+}
+
+.carousel-content .text .title {
+    font-size: 3em;
+    text-transform: uppercase;
+}
+
+.title2, .desc2 {
+    text-align: right;
+}
+
+.slide {
+    user-select: none;
+}
+
+@font-face {
+    font-family: "Consolas";
+    src: url(./assets/Consolas-Font/Consolas.ttf);
+}
+
+.carousel-content .text .desc {
+    font-family: "Consolas";
+    font-size: 1.3em;
+}
+
+
+/* carousel movement */
+
+.slide {
+    opacity: 0;
+    transition: 300ms opacity ease-in-out;
+    transition-delay: 300ms;
+    display: none;
+}
+
+.slide[data-active] {
+    opacity: 1;
+    transition-delay: 0;
+    display: flex;
+}
+
+
+/* media query */
+
+@media (max-width: 1122px) {
+
+    .carousel-content .image {
+        width: 14em;
+    }
+
+    .image-carousel-vertical {
+      height: 14em;
+    }
+
+    .carousel-content .text .title {
+        font-size: 2em;
+        text-transform: uppercase;
+    }
+
+    .carousel-content .text .desc {
+        font-family: "Consolas";
+        font-size: 1em;
+    }
+
+    .container-carousel {
+        height: 15rem;
+    }
+
+    .container-header {
+        height: 16rem;
+    }
+
+    .header-text p:first-child {
+        font-size: 0.5em;
+    }
+
+    .header-text p:last-child {
+        font-size: 0.5em;
+    }
+    
+    .choco-header {
+        width: 20em;
+    }
+
+}
+
+@media (max-width: 653px) {
+
+    header ,section {
+        max-height: 60rem;
+    }
+
+    .carousel-content .image {
+        width: 10em;
+    }
+  
+    .image-carousel-vertical {
+      height: 11em;
+    }
+
+    .carousel-content .text .title {
+        font-size: 1.3em;
+        text-transform: uppercase;
+    }
+
+    .carousel-content .text .desc {
+        font-family: "Consolas";
+        font-size: 0.7em;
+    }
+
+    .container-carousel {
+        height: 10rem;
+    }
+
+    .container-header {
+        height: 10rem;
+    }
+
+    .header-text p:first-child {
+        font-size: 0.3em;
+    }
+
+    .header-text p:last-child {
+        font-size: 0.3em;
+    }
+    
+    .choco-header {
+        width: 15em;
+    }
+
+}
+
+
+/* ====================================================== NAV ====================================== */
+
+@media (max-width: 550px) {
+
+    header ,section {
+        max-height: 60rem;
+    }
+
+    .carousel-content .image {
+        width: 5em;
+    }
+
+    .image-carousel-vertical {
+      height: 5em;
+    }
+
+    .carousel-content .text {
+        width: 8em;
+        gap: 0.2em;
+        margin: 0 1em;
+    }
+
+    .carousel-content .text .title {
+        font-size: 0.8em;
+        text-transform: uppercase;
+    }
+
+    .carousel-content .text .desc {
+        font-family: "Consolas";
+        font-size: 0.2em;
+    }
+
+    .container-carousel {
+        height: 5rem;
+        display: flex;
+        justify-content: space between;
+    }
+
+    .content {
+      width: 100%;
+    }
+
+    .container-header {
+        height: 10rem;
+        gap: 1.5em;
+    }
+
+    .header-text p:first-child {
+        font-size: 0.2em;
+    }
+
+    .header-text p:last-child {
+        font-size: 0.2em;
+    }
+    
+    .choco-header {
+        width: 8em;
+    }
+
+    .carousel-content {
+        height: 5em;
+    }
+
+}
+/*====================================================== MID - SECTION ========================================================*/
+
+.mid-section {
+    
+    background-color: #753422;
+    height: 65rem;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.circle {
+    border-radius: 50%;
+    background-color: #FFB80033;
+    opacity: 20%;
+
+    position: absolute;
+    right: 10%;
+    top: 68%;
+
+    width: 10vw;
+    height: 10vw;
+}
+
+.circle2 {
+    border-radius: 50%;
+    background-color: #C5C5C526;
+    opacity: 15%;
+
+    position: absolute;
+    right: 10%;
+    top: 10%;
+
+    width: 5vw;
+    height: 5vw;
+}
+
+.circle-2 {
+    position: absolute;
+    top: -5%;
+    left: 10%; 
+    
+}
+
+.circle-3 {
+    position: absolute;
+    top: 80%;
+    right: 30%;
+    width: 5vw;
+    height: 5vw;
+}
+
+.circle-4 {
+    position: absolute;
+    top: 70%;
+    left: 20%;
+    width: 8vw;
+    height: 8vw;
+}
+
+.circle2-2 {
+    position: absolute;
+    top: 45%;
+    left: 10%;
+    width: 10vw;
+    height: 10vw;
+}
+
+.circle2-3 {
+    position: absolute;
+    top: 20%;
+    right: 30%;
+    width: 8vw;
+    height: 8vw;
+}
+
+.circle2-4 {
+    position: absolute;
+    top: 30%;
+    left: 70%;
+    width: 10vw;
+    height: 10vw;
+}
+
+.circle2-5 {
+    position: absolute;
+    top: 60%;
+    left: 30%;
+    width: 10vw;
+    height: 10vw;
+}
+
+.circle2-6 {
+    position: absolute;
+    top: 5%;
+    left: 30%;
+    width: 15vw;
+    height: 15vw;
+}
+
+/*============================== mid section content ========================= */
+
+.mid-container {
+    position: relative;
+
+    width: 55em;
+    height: 50em;
+    margin: 0 auto;
+
+}
+
+.mid-box-image {
+    width: 35em;
+    
+    position: absolute;
+
+    top: 30%;
+    left: 0%;
+
+}
+
+.mid-box-text {
+    position: absolute;
+
+    width: 26em;
+    height: 24rem;
+    top: 50%;
+    right: 0%;
+
+    background-color: #97E2DE;
+    box-shadow: -0.3rem 0.3rem 0.4em rgba(0, 0, 0, 0.25);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+    padding: 3rem;
+}
+
+.mid-box-text p:first-child {
+    font-family: "Impact";
+    color: #602919;
+    font-size: 3em;
+}
+
+.mid-box-text p:nth-child(2) {
+    font-family: "Ubuntu";
+    color: #602919;
+    letter-spacing: 0.06em;
+    text-align: justify;
+}
+
+.mid-box-text button {
+    font-family: "Ubuntu";
+    color: #753422;
+    background-color: #FFEBC9;
+    box-shadow: 0 0.3rem 0.4em rgba(0, 0, 0, 0.25);
+    text-decoration: none;
+    border: none;
+    font-size: 1.5em;
+
+    padding: 0.5em;
+    
+    border-radius: 0.6em;
+
+    cursor: pointer;
+}
+
+.mid-box-text button:hover {
+    color: #FFEBC9;
+    background-color: #753422;
+}
+
+/*  query */
+
+@media (max-width: 928px) {
+
+    .mid-container,
+    .mid-box-image,
+    .mid-box-text {
+        position: static;
+
+        display: flex;
+        align-self: center;
+        justify-content: space-between;
+        flex-direction: column;
+        margin: auto auto;
+    }
+    
+    .mid-container {
+        width: 30em;
+    }
+
+    .mid-box-image {
+        width: 26em;
+    }
+
+}
+
+@media (max-width: 647px) {
+
+    .mid-container,
+    .mid-box-image,
+    .mid-box-text {
+        position: static;
+
+        display: flex;
+        align-self: center;
+        justify-content: space-between;
+        flex-direction: column;
+        margin: auto auto;
+    }
+    
+    .mid-container {
+        width: 20em;
+        height: 45em;
+    }
+
+    .mid-box-image {
+        width: 18em;
+    }
+
+    .mid-box-text {
+        width: 18em;
+    }
+
+    .mid-box-text p:first-child {
+        font-size: 2em;
+    }
+    
+    .mid-box-text p:nth-child(2) {
+        font-size: 0.85em;
+        
+    }
+    
+    .mid-box-text button {
+    
+        font-size: 1em;
+    
+        padding: 0.3em;
+        
+        border-radius: 0.6em;
+    
+        cursor: pointer;
+    }
+}
+
